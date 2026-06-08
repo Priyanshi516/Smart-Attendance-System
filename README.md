@@ -16,14 +16,16 @@ A real-time, automated classroom attendance system featuring localized facial re
 ## 📐 System Architecture
 
 The following block diagram outlines the data flow of the Smart Attendance System, demonstrating how visual data transitions from raw webcam frames into secure spreadsheet logs:
+
+```text
 [Local Image Directory] ──> [LBPH Face Model Trainer] ──> [Trained Weight Keys (trainer.yml)]
-│
-▼
-[Live Webcam Feed]    ──> [Haar Cascade Detector]    ──> [Face Feature Comparison Engine]
-│
-▼
+                                                                    │
+                                                                    ▼
+ [Live Webcam Feed]    ──> [Haar Cascade Detector]    ──> [Face Feature Comparison Engine]
+                                                                    │
+                                                                    ▼
 [CSV Log Database]     <── [Integrity Filter Check]   <── [Identity Validation Stream]
----
+```
 
 ## 📦 Prerequisites & Installation
 
